@@ -1,0 +1,19 @@
+{
+  "name": "pom_puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "base.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "puppeteer": "^2.0.0",
+    "puppeteer-core": "^2.0.0"
+  },
+  "directories": {
+    "test": "Login"
+  }
+}
