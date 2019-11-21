@@ -4,16 +4,15 @@
   "description": "",
   "main": "base.js",
   "scripts": {
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 30000 --file ./test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
+    "directories": "test",
     "puppeteer": "^2.0.0",
-    "puppeteer-core": "^2.0.0"
-  },
-  "directories": {
-    "test": "Login"
+    "puppeteer-core": "^2.0.0",
+    "use-global-hook": "^0.1.12"
   }
 }

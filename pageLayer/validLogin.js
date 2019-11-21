@@ -5,14 +5,6 @@ var loginSelector = require('../pageLocator/LoginPage');
 // var assert = require('chai').assert
 
 module.exports = async () => {
-    // const browser = await puppeteer.launch({
-    //     // headless: false,
-    //     //  args: ['--start-maximized']
-    // });
-    // const pages = await browser.pages();
-		//     const page = pages[0];
-		
-
     try {
         
         // await page.goto(cred.URL);
@@ -25,14 +17,14 @@ module.exports = async () => {
         // await page.screenshot({ path:'buddy-screenshotPTM.png'});
 
         await page.waitForXPath(loginSelector.ASSERTION_Selector);
-        console.log('output1')
+        // console.log('output1')
         var [element_new] = await page.$x(loginSelector.ASSERTION_Selector);
         var text = await (await element_new.getProperty('textContent')).jsonValue();
-        // console.log('sasa', text)
+        // console.log(text)
         return (text);
     } catch (e) {
          await page.screenshot({ path:'buddy-screenshotPTMe.png'});
-        console.log('ERROR', e);
+        console.log('     ***validLogin page ERROR***   ', e);
     }
     finally {
         
